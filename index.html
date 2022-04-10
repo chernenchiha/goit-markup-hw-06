@@ -51,14 +51,14 @@
         <!--заголовок-->
         <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <a href="#" class="modal-icon-bg">
-            <svg data-modal-close class="modal-icon" width="18" height="18">
-                <use href="./images/sprite.svg#close"></use>
-            </svg></a>
+           <button type="button" class="modal-icon-bg" data-modal-close>
+                <svg class="modal-icon" width="18" height="18">
+                    <use href="./images/sprite.svg#close"></use>
+                </svg>
+            </button> 
 
-            
+            <b class="slogan">Оставьте свои данные, мы вам перезвоним</b>
             <form class="form">
-                <b class="slogan">Оставьте свои данные, мы вам перезвоним</b>
                 <label class="form-field">
                     <span class="form-label">Имя</span>
                         <span class="form-input-wrapper">
@@ -99,7 +99,7 @@
                     <label class="form-checkbox-label" for="policy">Соглашаюсь с рассылкой и принимаю&nbsp;<a href="" > Условия договора</a></label>
                 </div>
                 
-                <button type="submit" class="form-btn">Отправить</button>            
+                <button type="submit" class="main-btn">Отправить</button>            
         </form>
         </div>
         </div>
@@ -107,7 +107,7 @@
 
          <section class="hero">
             <h1 class="title hero-title">Эффективные решения <br>для вашего бизнеса</h1>
-            <button data-modal-open type="button" class="main-btn ">Заказать услугу</button>
+            <button data-modal-open type="button" class="main-btn">Заказать услугу</button>
         </section>
         
     
@@ -405,7 +405,7 @@
         <!--подвал-->
     <footer class="footer">
         <div class="container footer-container">
-        <div class="footer-address-container">
+        <div class="footer-container-item">
             <a href="" class=" link logo">Web<span class="logo-footer">Studio</span></a> 
             <address class="address">
                 <ul class="list address-list"> 
@@ -415,8 +415,8 @@
                 </ul>
             </address>
         </div>
-        <div class="footer-icon-container">
-            <h3 class="title">присоединяйтесь</h3>
+        <div class="footer-container-item">
+            <h3 class="footer-form-slogan">присоединяйтесь</h3>
             <ul class="list social-list"> 
                 <li class="social-item">
                     <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener" class="link icon-link footer-icon-link">
@@ -449,7 +449,7 @@
                 
             </ul>
     </div>
-            <div class="footer-form-container">
+            <div class="footer-container-item">
             <b class="footer-form-slogan">Подпишитесь на рассылку</b>
             <form class="footer-form">
     
@@ -457,7 +457,7 @@
                     <input class="footer-form-input" type="email" name="email" placeholder="E-mail" required>
                 </label>
 
-                <button type="submit" class="footer-form-btn">
+                <button type="submit" class="main-btn">
                      Подписаться
                     <svg class="footer-form-icon" width="24" height="24">
                         <use href="./images/sprite.svg#icon-send"></use>

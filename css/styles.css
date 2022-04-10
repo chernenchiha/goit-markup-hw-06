@@ -142,10 +142,14 @@ img {
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    background-color: var(--white-text-color)
-    
+    background-color: var(--white-text-color);
+    cursor: pointer;
 }
 
+.modal-icon-bg:hover,
+.modal-icon-bg:focus {
+    fill: var(--accent-color);
+}
 
 .slogan {
     display: block;
@@ -159,8 +163,17 @@ img {
 
 .form-input-wrapper {
     position: relative;
-    display: block;
-    margin-bottom: 12px; 
+}
+
+.form-field,
+.form-field-comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-field:not(:last-child) {
+     margin-bottom: 12px; 
 }
 
 .form-comment,
@@ -177,14 +190,18 @@ img {
     transition: border-color var(--time-animation) var(--time-distribution);
 }
 
+
+.form-input:hover,
 .form-input:focus,
+.form-comment:hover,
 .form-comment:focus {
     outline: none;
     border-color: var(--accent-color);
 }
 
+.form-input:hover + .form-input-icon,
 .form-input:focus + .form-input-icon {
-    fill: var(--accent-color)
+    fill: var(--accent-color);
 }
 
 .form-input-icon {
@@ -196,7 +213,6 @@ img {
 }
 
 .form-comment {
-    margin-bottom: 20px;
     height: 120px;
     resize: none;
     padding: 12px 16px;
@@ -206,7 +222,6 @@ img {
 
 .form-label,
 .form-comment::placeholder {
-    display: block;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
@@ -254,29 +269,8 @@ img {
     
 }
 
-.form-btn,
-.footer-form-btn {
-    display: block;
-    min-width: 200px;
-    
-    padding: 10px 30px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    margin-left: auto;
-    margin-right: auto; 
-    cursor: pointer;
-    border: none;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    background: var(--accent-color);
-    color: var(--white-background-color);
-    transition: background-color var(--time-animation) var(--time-distribution);
-}
-
-.form-btn:hover,
-.form-btn:focus {
+.main-btn:hover,
+.main-btn:focus {
     background: var(--accent-modal-btn-color);
 }
 /*---Logo---*/
@@ -430,8 +424,8 @@ img {
 }
 
 .main-btn {
-    display: inline-block;
-    
+    display: flex;
+    justify-content: center;
 
     border: none;
     border-radius: 4px;
@@ -448,7 +442,7 @@ img {
     line-height: 1.88;
     letter-spacing: 0.06em;
     cursor: pointer;
-    text-align: center;
+    /* text-align: center; */
 
     transition: background-color var(--time-animation) var(--time-distribution);
 
@@ -457,6 +451,12 @@ img {
 .main-btn:hover,
 .main-btn:focus {
     background-color: #188CE8;
+}
+
+.hero .main-btn,
+.modal .main-btn {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*---Methodology---*/
@@ -661,8 +661,12 @@ img {
     align-items: baseline;
 }
 
-.footer-address-container {
+.footer-container-item:not(:last-child){
     margin-right: 70px;
+}
+
+.footer-container-item:last-child {
+    margin-left: auto;
 }
 
 .footer .logo {
@@ -692,8 +696,6 @@ img {
     margin-bottom: 9px;
 }
 
-
-.footer-icon-container .title,
 .footer-form-slogan {
     display: block;
     margin-bottom: 20px;
@@ -703,10 +705,6 @@ img {
     font-size: 14px;
     line-height: 1.14;
 
-}
-
-.footer-icon-container{
-    margin-right: 94px;
 }
 
 .footer-icon-link {
@@ -757,9 +755,6 @@ img {
     color: var(--white-background-color);
 }
 
-.footer-form-btn {
-    display: flex;
-}
 
 .footer-form-icon {
     margin-left: 10px;
@@ -797,7 +792,8 @@ img {
 }
 
 .btn-portfolio:hover,
-.btn-portfolio:focus {
+.btn-portfolio:focus,
+.active {
    background-color: var(--accent-color);
    color: var(--white-text-color);
    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
