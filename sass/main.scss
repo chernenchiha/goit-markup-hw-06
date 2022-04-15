@@ -1,3 +1,20 @@
+@import './utils/variables';
+@import './base/common';
+@import './base/container';
+@import './utils/visually-hidden';
+@import './components/main-btn';
+@import './components/section-title';
+@import './components/logo';
+@import './components/icon-link';
+@import './components/title';
+@import './layout/modal';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/footer';
+@import './layout/methodology';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/portfolio';
 
 /*activity*/
 
@@ -31,4 +48,3 @@
     color: var(--white-text-color);
     background-color: var(--bg-color-activity-wrraper);
 }
-
